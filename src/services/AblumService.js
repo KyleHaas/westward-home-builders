@@ -18,20 +18,23 @@ const s3 = new S3({
 //
 // Utility function to list the ablums available in s3.
 export const getAlbums = () => {
-  let results= []
+  const results= []
   let result = s3.listObjects({Delimiter: '/'}, function(err, data) {
     if (err) {
       return alert('There was an error listing your albums: ' + err.message);
-    } else {
-      data.CommonPrefixes.map(function(commonPrefix) {
-        var prefix = commonPrefix.Prefix;
-        results.push(decodeURIComponent(prefix.replace('/', '')));
-      });
     }
+  }).promise();
+  result.then(function(data) {
+    console.log(data);
+    data.CommonPrefixes.map(function(commonPrefix) {
+      var prefix = commonPrefix.Prefix;
+      results.push(decodeURIComponent(prefix.replace('/', '')));
+    });
+  }).catch(function(err) {
+
   });
-  
   console.log(results);
-  return result;
+  return results;
 }
 
 function mapResults(apiresponse, response){

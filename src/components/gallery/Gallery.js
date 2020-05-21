@@ -14,6 +14,7 @@ class Gallery extends Component {
 
     componentDidMount() {
         this.setState({albums: getAlbums() });
+        console.log(getAlbums());
     }
 
     render() {
