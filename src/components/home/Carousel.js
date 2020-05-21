@@ -1,19 +1,21 @@
 import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
-import slide1 from '../../assets/home/slide1.jpg'
-import slide2 from '../../assets/home/slide2.jpg'
-import slide3 from '../../assets/home/slide3.jpg'
 
 export default () => (
-    <Carousel autoPlay showThumbs={false} showArrows={false} showStatus={false} infiniteLoop={true} interval={8000}>
+    <Carousel autoPlay showThumbs={false} showArrows={false} showStatus={false} infiniteLoop={true} interval={8000} dynamicHeight={false}>
         <div>
-            <img alt="" src={slide1} />        
+            <img className="img-responsive" alt="" src={require(`../../assets/home/home_addition.jpg`)} />
+            <div className="promo">
+                <h1>Blip and Button</h1>
+            </div>
         </div>
         <div>
-            <img alt="" src={slide2} />
+            <img className="img-responsive" alt="" src={require(`../../assets/home/custom_home.jpg`)} />
+            <p className="legend">Hello</p>
         </div>
         <div>
-            <img alt="" src={slide3} />
+            <img className="img-responsive" alt="" src={require(`../../assets/home/home_remodel.jpg`)} />
+            <p className="legend">Hello</p>
         </div>
     </Carousel>
 );

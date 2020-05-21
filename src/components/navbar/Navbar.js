@@ -54,10 +54,20 @@ const NavBar = styled(animated.nav)`
   z-index: 1;
   font-size: 1.4rem;
   z-index: 99 !important;
+  -webkit-transition: .5s all ease;
+	-moz-transition: .5s all ease;
+	transition: .5s all ease;
 `;
 
 const NavBarPadding = styled.div`
     height: 10rem;
+    -webkit-transition: .5s all ease;
+    -moz-transition: .5s all ease;
+    transition: .5s all ease;
+    
+    @media (max-width: 769px) {
+      height: 6rem;
+    }
 `;
 
 const FlexContainer = styled.div`
@@ -67,6 +77,13 @@ const FlexContainer = styled.div`
   padding: 0 2rem;;
   justify-content: space-between;
   height: 10rem;
+  -webkit-transition: .5s all ease;
+	-moz-transition: .5s all ease;
+	transition: .5s all ease;
+
+  @media (max-width: 769px) {
+    height: 6rem;
+  }
 `;
 
 const NavLinks = styled(animated.ul)`

@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
 
-  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100&display=swap');
 
   *,
   *::after,
@@ -18,12 +18,12 @@ const GlobalStyles = createGlobalStyle`
 
   body {
     box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto Slab', serif;
   }
 
   .section {
       width: 100%;
-      padding: 20px;
+      padding: 50px;
       text-align: center;
       font-size: 14px;
   }

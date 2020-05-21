@@ -25,7 +25,7 @@ class App extends Component {
         />
         <Router>
           <Switch>
-            <Route path="/" component={Home}/>
+            <Route exact path="/" component={Home}/>
           </Switch>
         </Router>
         <Footer/>

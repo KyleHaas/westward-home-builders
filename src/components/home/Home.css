@@ -1,4 +1,19 @@
 .carousel .slide img {
-    max-height: 90vh;  
+    
     width: 100%;
+}
+
+.carousel .slide .promo {
+    transition: all .5s ease-in-out;
+    position: absolute;
+    bottom: 65%;
+    left: 95%;
+    margin-left: -45%;
+    width: 45%;
+    border-radius: 10px;
+    background: transparent;
+    color: #fff;
+    padding: 10px;
+    font-size: 12px;
+    text-align: center;
 }
