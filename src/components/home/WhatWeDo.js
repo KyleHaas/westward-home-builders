@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default () => (
-    <div className="section light-grey" >
+    <div className="section " >
         <h2>What we do</h2>
         <hr/>
         <p>Contrary to popular belief, Lorem Ipsum is not simply random text. 
