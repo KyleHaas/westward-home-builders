@@ -7,22 +7,23 @@ import Carousel, { Modal, ModalGateway } from "react-images";
 class ViewGallery extends Component {
 
     state = {
-         album: null
-    }
-
-    getImages (albumName){
-        return viewAlbum(albumName);
+        albumName: null,
+        images: []
     }
 
     componentDidMount () {
+        // Retrieve the list of ablums available. Then set the 
+        // state based on the results.
+        let albumName = this.props.album;
+        viewAlbum(albumName).then((res) =>{
+            this.setState({images: res, albumName : albumName})
+        });
     }
     render() {
-        const album = this.props.album;
-        const images = this.getImages(album);
         return(
             <div>
-                <p>{album}</p>
-                <PhotoGallery images={images}></PhotoGallery>
+                <p>{this.state.albumName}</p>
+                <PhotoGallery images={this.state.images}></PhotoGallery>
             </div>
         )
     }

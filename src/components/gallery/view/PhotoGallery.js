@@ -20,7 +20,7 @@ function PhotoGallery(props) {
 
     return (    
         <div>
-            <p>{props.images.size}</p>
+            <p>{props.images.length}</p>
             <Gallery photos={photos} onClick={openLightbox} />
             <ModalGateway>
                 {viewerIsOpen ? (

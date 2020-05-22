@@ -30,12 +30,15 @@ export async function getAlbums(){
 }
 
 // Retrieve photos that exist in an album.
-export const viewAlbum = (albumName) => {
+export async function viewAlbum(albumName){
   var albumPhotosKey = encodeURIComponent(albumName) + '/';
-  return s3.listObjects({Prefix: albumPhotosKey}, function(err, data) {
+  const awsResponse = await s3.listObjects({Prefix: albumPhotosKey}, function(err, data) {
     if (err) {
       return alert('There was an error viewing your album: ' + err.message);
     }
-    return data.Contents
+  }).promise();
+  console.log(awsResponse);
+  return awsResponse.Contents.map(function(image) {
+    return image.Key.replace(albumPhotosKey, '');
   });
 }
