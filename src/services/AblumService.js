@@ -17,28 +17,16 @@ const s3 = new S3({
 // Functions
 //
 // Utility function to list the ablums available in s3.
-export const getAlbums = () => {
-  const results= []
-  let result = s3.listObjects({Delimiter: '/'}, function(err, data) {
+export async function getAlbums(){
+  const awsResponse = await s3.listObjects({Delimiter: '/'}, function(err, data) {
     if (err) {
       return alert('There was an error listing your albums: ' + err.message);
     }
   }).promise();
-  result.then(function(data) {
-    console.log(data);
-    data.CommonPrefixes.map(function(commonPrefix) {
-      var prefix = commonPrefix.Prefix;
-      results.push(decodeURIComponent(prefix.replace('/', '')));
-    });
-  }).catch(function(err) {
-
+  return awsResponse.CommonPrefixes.map(function(commonPrefix) {
+    var prefix = commonPrefix.Prefix;
+    return decodeURIComponent(prefix.replace('/', ''));
   });
-  console.log(results);
-  return results;
-}
-
-function mapResults(apiresponse, response){
-
 }
 
 // Retrieve photos that exist in an album.

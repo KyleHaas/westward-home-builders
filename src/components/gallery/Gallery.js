@@ -8,20 +8,19 @@ class Gallery extends Component {
         albums: []
     }
 
-    constructor(props) {
-        super(props)
-    }
-
     componentDidMount() {
-        this.setState({albums: getAlbums() });
-        console.log(getAlbums());
+        // Retrieve the list of ablums available. Then set the 
+        // state based on the results.
+        getAlbums().then((res) =>{
+            this.setState({albums: res})
+        });
     }
 
     render() {
         return (
             <>
                 <div>
-                    <h2>{this.state.albums.size}</h2>
+                    <h2>{this.state.albums.length}</h2>
                 </div>
            </>
           )

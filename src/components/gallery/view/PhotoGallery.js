@@ -27,7 +27,7 @@ function PhotoGallery(props) {
                 <Modal onClose={closeLightbox}>
                     <Carousel
                     currentIndex={currentImage}
-                    views={props.images.map(x => ({
+                    views={photos.map(x => ({
                         ...x,
                         srcset: x.srcSet,
                         caption: x.title
