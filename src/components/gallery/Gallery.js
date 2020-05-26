@@ -1,6 +1,5 @@
-import React, { Component, useState, useCallback } from 'react';
+import React, { Component} from 'react';
 import {getAlbums} from '../../services/AblumService'
-import ViewGallery from './view/ViewGallery'
 
 class Gallery extends Component {
  
@@ -17,10 +16,16 @@ class Gallery extends Component {
     }
 
     render() {
+        const albums = this.state.albums.map((album) =>
+            <li ><a href={/gallery/ + album}>{album}</a></li>
+        );
         return (
             <>
                 <div>
                     <h2>{this.state.albums.length}</h2>
+                    <ul>
+                        {albums}
+                    </ul>
                 </div>
            </>
           )

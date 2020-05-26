@@ -9,6 +9,7 @@
     "aws-sdk": "2.681.0",
     "css-loader": "3.5.3",
     "react": "^16.13.1",
+    "react-bootstrap": "1.0.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
     "react-spring": "8.0.27",

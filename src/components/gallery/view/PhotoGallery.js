@@ -1,5 +1,4 @@
 import React, { useState, useCallback } from 'react';
-import { photos } from "./photos";
 import Gallery from "react-photo-gallery";
 import Carousel, { Modal, ModalGateway } from "react-images";
 
@@ -18,16 +17,18 @@ function PhotoGallery(props) {
       setViewerIsOpen(false);
     };
 
+    let images = props.images.map(function(image) {
+        return {width:5, height: 4, src:image}
+    });
     return (    
-        <div>
-            <p>{props.images.length}</p>
-            <Gallery photos={photos} onClick={openLightbox} />
+        <div className="container">
+            <Gallery photos={images} onClick={openLightbox} />
             <ModalGateway>
                 {viewerIsOpen ? (
                 <Modal onClose={closeLightbox}>
                     <Carousel
                     currentIndex={currentImage}
-                    views={photos.map(x => ({
+                    views={images.map(x => ({
                         ...x,
                         srcset: x.srcSet,
                         caption: x.title

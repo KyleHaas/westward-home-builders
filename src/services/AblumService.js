@@ -3,6 +3,7 @@ import S3 from 'aws-sdk/clients/s3';
 
 const albumBucketName = 'gallery.westwardhomebuilders.com';
 
+// AWS Configuration.
 AWS.config.region = 'us-east-1'; // Region
 AWS.config.credentials = new AWS.CognitoIdentityCredentials({
     IdentityPoolId: 'us-east-1:fbcbfd64-e19a-4372-b81e-6183a46ccd3f',
@@ -37,7 +38,6 @@ export async function viewAlbum(albumName){
       return alert('There was an error viewing your album: ' + err.message);
     }
   }).promise();
-  console.log(awsResponse);
   return awsResponse.Contents.map(function(image) {
     return image.Key.replace(albumPhotosKey, '');
   });

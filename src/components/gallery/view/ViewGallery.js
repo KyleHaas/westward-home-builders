@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import { photos } from "./photos";
 import PhotoGallery from "./PhotoGallery";
 import {viewAlbum} from '../../../services/AblumService'
-import Carousel, { Modal, ModalGateway } from "react-images";
 
 class ViewGallery extends Component {
 
@@ -12,17 +10,21 @@ class ViewGallery extends Component {
     }
 
     componentDidMount () {
+        const imageUrl = 'https://d2y23heqdij067.cloudfront.net/'
         // Retrieve the list of ablums available. Then set the 
         // state based on the results.
         let albumName = this.props.album;
         viewAlbum(albumName).then((res) =>{
-            this.setState({images: res, albumName : albumName})
+            let images = res.filter(image => image.match(/\.(jpeg|jpg|gif|png)$/) != null)
+                .map(image => imageUrl + albumName +'/' + image);
+            this.setState({images: images, albumName : albumName})
         });
+        
     }
     render() {
         return(
             <div>
-                <p>{this.state.albumName}</p>
+                <h2>{this.state.albumName}</h2>
                 <PhotoGallery images={this.state.images}></PhotoGallery>
             </div>
         )
