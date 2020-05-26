@@ -3,6 +3,7 @@ import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
 import Home from "./components/home/Home"
 import Gallery from "./components/gallery/Gallery"
+import NotFound from "./components/error/NotFound"
 import ViewGallery from "./components/gallery/view/ViewGallery"
 import { Switch,Route,BrowserRouter as Router } from "react-router-dom";
 
@@ -30,6 +31,7 @@ class App extends Component {
             <Route exact path="/" component={Home}/>
             <Route exact path="/gallery" component={Gallery}/>
             <Route path="/gallery/:album" render={({match}) => (<ViewGallery album={match.params.album}/>)}/> 
+            <Route path="*" component={NotFound}/>
           </Switch>
         </Router>
         <Footer/>

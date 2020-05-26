@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
 
-  @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap');
 
   *,
   *::after,
@@ -18,7 +18,7 @@ const GlobalStyles = createGlobalStyle`
 
   body {
     box-sizing: border-box;
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Titillium Web', sans-serif;
     rgba(0,0,0,0.95);
   }
 
@@ -28,6 +28,12 @@ const GlobalStyles = createGlobalStyle`
       text-align: center;
       font-size: 14px;
   }
+
+  .section-inner {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
   
   .section p {
     max-width: 120rem;
@@ -35,8 +41,9 @@ const GlobalStyles = createGlobalStyle`
   }
 
   .section h2{
-    font-weight: 200;
+    font-weight: 100;
     font-size: 42px;
+    padding: 7rem 0;
   }
 
   .grey{

@@ -3,7 +3,7 @@ import Carousel from './Carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import './Home.css';
 import WhoWeAre from './WhoWeAre';
-import WhatWeDo from './WhatWeDo';
+import Services from './Services';
 
 class Home extends Component {
     
@@ -11,8 +11,9 @@ class Home extends Component {
         return (
             <>
               <Carousel/>
-              <WhoWeAre/>
-              <WhatWeDo/>
+              
+              {/* <WhoWeAre/> */}
+              <Services/>
            </>
           )
     }
