@@ -1,21 +1,20 @@
 import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
 
+var slide1 = require(`../../assets/home/home_addition.jpg`)
+var slide2 = require(`../../assets/home/custom_home.jpg`)
+var slide3 = require(`../../assets/home/home_remodel.jpg`)
 export default () => (
-    <Carousel autoPlay showThumbs={false} showArrows={false} showStatus={false} infiniteLoop={true} interval={8000} dynamicHeight={false}>
-        <div>
-            <img className="img-responsive" alt="" src={require(`../../assets/home/home_addition.jpg`)} />
-            {/* <div className="promo">
-                <h1>Blip and Button</h1>
-            </div> */}
-        </div>
-        <div>
-            <img className="img-responsive" alt="" src={require(`../../assets/home/custom_home.jpg`)} />
-            {/* <p className="legend">Hello</p> */}
-        </div>
-        <div>
-            <img className="img-responsive" alt="" src={require(`../../assets/home/home_remodel.jpg`)} />
-            {/* <p className="legend">Hello</p> */}
-        </div>
+    <Carousel autoPlay showThumbs={false} showArrows={false} showStatus={false} infiniteLoop={true} interval={8000} showIndicators={false} className="carousel-wrapper">
+        <div className="image-container" style={{
+            backgroundImage: "url(" + slide1+")"
+        }}> </div>
+        <div className="image-container" style={{
+            backgroundImage: "url(" + slide2+")"
+        }}> </div>
+        <div className="image-container" style={{
+            backgroundImage: "url(" + slide3+")"
+        }}> </div>
     </Carousel>
+    
 );

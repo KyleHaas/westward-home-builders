@@ -32,7 +32,7 @@ export default CollapseMenu;
 const CollapseWrapper = styled(animated.div)`
   background: #2d3436;
   position: fixed;
-  top: 9.5rem;
+  top: 7.5rem;
   left: 0;
   right: 0;
   z-index: 98 !important;

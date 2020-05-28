@@ -2,6 +2,7 @@ import React, { Component , Link } from 'react';
 import { Spinner, Card, CardDeck} from 'react-bootstrap';
 import {getAlbums} from '../../services/AblumService'
 import styled from "styled-components";
+import './Gallery.css'
 
 class Gallery extends Component {
  
@@ -56,10 +57,11 @@ class Gallery extends Component {
 
 const FlexContainer = styled.div`
   max-width: 120rem;
-
+ 
   margin: auto;
   padding: 2rem 2rem 8rem 2rem;
-
+  width: 100%;
+  flex: 1;
 `;
 
 export default Gallery

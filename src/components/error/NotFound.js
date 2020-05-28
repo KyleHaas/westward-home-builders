@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Error.css'
 
 
 class NotFound extends Component {
@@ -6,7 +7,7 @@ class NotFound extends Component {
     render() {
         return (
             <>
-              <div class="container">
+              <div class="error-container">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="error-template">

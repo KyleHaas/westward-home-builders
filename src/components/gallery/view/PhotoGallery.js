@@ -21,11 +21,11 @@ function PhotoGallery(props) {
         return {width:5, height: 4, src:image}
     });
     return (    
-        <div className="container">
+        <div className="container" style={{marginTop: '5rem'}}>
             <Gallery photos={images} onClick={openLightbox} />
             <ModalGateway>
                 {viewerIsOpen ? (
-                <Modal onClose={closeLightbox}>
+                <Modal  onClose={closeLightbox} >
                     <Carousel
                     currentIndex={currentImage}
                     views={images.map(x => ({

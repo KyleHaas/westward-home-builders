@@ -6,7 +6,7 @@ import Gallery from "./components/gallery/Gallery"
 import NotFound from "./components/error/NotFound"
 import ViewGallery from "./components/gallery/view/ViewGallery"
 import { Switch,Route,BrowserRouter as Router } from "react-router-dom";
-
+import './App.css'
 import GlobalStyle from './styles/Global';
 
 class App extends Component {
@@ -26,14 +26,16 @@ class App extends Component {
           navbarState={this.state.navbarOpen} 
           handleNavbar={this.handleNavbar}
         />
-        <Router>
-          <Switch>
-            <Route exact path="/" component={Home}/>
-            <Route exact path="/gallery" component={Gallery}/>
-            <Route path="/gallery/:album" render={({match}) => (<ViewGallery album={match.params.album}/>)}/> 
-            <Route path="*" component={NotFound}/>
-          </Switch>
-        </Router>
+        <div className="main-content">
+          <Router>
+            <Switch>
+              <Route exact path="/" component={Home}/>
+              <Route exact path="/gallery" component={Gallery}/>
+              <Route path="/gallery/:album" render={({match}) => (<ViewGallery album={match.params.album}/>)}/> 
+              <Route path="*" component={NotFound}/>
+            </Switch>
+          </Router>
+        </div>
         <Footer/>
         <GlobalStyle />
       </>

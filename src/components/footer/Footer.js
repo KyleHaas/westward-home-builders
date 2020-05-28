@@ -49,6 +49,7 @@ export default Footer
 const PageFooter = styled.div`
     background: #2d3436;
     padding: 40px 0px 0px 0px;
+    flex: 1;
 `;
 
 const FooterSection = styled.div`
@@ -75,7 +76,7 @@ const FooterLink = styled.li`
     padding: 3px;
 
     &:hover {
-      color: #45b649;
+      color: #25ae62;
       text-decoration: none;
     }
   }

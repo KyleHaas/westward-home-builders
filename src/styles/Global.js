@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
 
-  @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
 
   *,
   *::after,
@@ -18,7 +18,7 @@ const GlobalStyles = createGlobalStyle`
 
   body {
     box-sizing: border-box;
-    font-family: 'Titillium Web', sans-serif;
+    font-family: 'Open Sans Condensed', sans-serif
     rgba(0,0,0,0.95);
   }
 

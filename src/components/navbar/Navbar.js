@@ -60,7 +60,7 @@ const NavBar = styled(animated.nav)`
 `;
 
 const NavBarPadding = styled.div`
-    height: 10rem;
+    height: 8rem;
     -webkit-transition: .5s all ease;
     -moz-transition: .5s all ease;
     transition: .5s all ease;
@@ -76,7 +76,7 @@ const FlexContainer = styled.div`
   margin: auto;
   padding: 0 2rem;;
   justify-content: space-between;
-  height: 10rem;
+  height: 8rem;
   -webkit-transition: .5s all ease;
 	-moz-transition: .5s all ease;
 	transition: .5s all ease;

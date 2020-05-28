@@ -1,21 +1,13 @@
 body {
   margin: 0;
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
   
-  font-family: 'Work Sans', sans-serif;
-}
-.icon {
-  color: #3b7bbe;
-  font-size:64px;
-}
-
-.thin {
-  --ionicon-stroke-width: 9px;
+  font-family: 'Open Sans Condensed', sans-serif;
 }
 
 

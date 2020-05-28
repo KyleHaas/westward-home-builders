@@ -1,0 +1,9 @@
+.react-images__positioner {
+    margin-top: 8rem;
+}
+
+@media(max-width: 769px){
+    .react-images__positioner {
+        margin-top: 5rem;
+    }
+}
