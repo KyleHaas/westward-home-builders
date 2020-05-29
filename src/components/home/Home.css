@@ -42,7 +42,8 @@
     flex-direction: column;
     -webkit-transition: .5s all ease;
 	-moz-transition: .5s all ease;
-	transition: .5s all ease;
+    transition: .5s all ease;
+    text-align: center;
 }
 
 .overlay-text {
@@ -87,6 +88,11 @@
     --ionicon-stroke-width: 16px;
     
   }
+
+.contact-us-button {
+    padding: 7px;
+    font-size: 2rem;
+}
 
 @media(max-width: 769px){
     .overlay {

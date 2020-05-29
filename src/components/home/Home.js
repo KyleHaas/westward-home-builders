@@ -20,7 +20,12 @@ class Home extends Component {
               <Carousel/>
               <div className="overlay">
                   <div className="overlay-text">
-                  <button type="button" class="btn btn-outline-light">Light</button>
+                      <div className="overlay-text-block">
+                          <h1>Hello</h1>
+                      </div>
+                    <button type="button" class="btn btn-outline-light contact-us-button">
+                        <ion-icon name="call-outline"></ion-icon> Call Us
+                    </button>
                   </div>
                   <div className="overlay-scroll">
                       <div className="overlay-scroll-button" onClick={() => this.scrolldown()}>
