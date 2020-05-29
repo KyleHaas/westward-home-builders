@@ -13,7 +13,6 @@ class Home extends Component {
     
 
     render() {
-        const ref = React.createRef();
 
         return (
             <>
@@ -21,7 +20,7 @@ class Home extends Component {
               <div className="overlay">
                   <div className="overlay-text">
                       <div className="overlay-text-block">
-                          <h1>Hello</h1>
+                          <h1>For All Your Building Needs</h1>
                       </div>
                     <button type="button" class="btn btn-outline-light contact-us-button">
                         <ion-icon name="call-outline"></ion-icon> Call Us
@@ -34,8 +33,9 @@ class Home extends Component {
                         </span>
                        </div>
                   </div>
+                  <div ref={(end) => {this.ref = end}}></div>
               </div>
-              <div ref={(end) => {this.ref = end}} className="section-divider">
+              <div className="section-divider">
                   <hr className="divider"/> 
               </div>
               <WhoWeAre/>

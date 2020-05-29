@@ -1,4 +1,4 @@
-import React, { Component , Link } from 'react';
+import React, { Component } from 'react';
 import { Spinner, Card, CardDeck} from 'react-bootstrap';
 import {getAlbums} from '../../services/AblumService'
 import styled from "styled-components";
@@ -44,11 +44,13 @@ class Gallery extends Component {
             <>
                 {}
                 <FlexContainer>
-                    <h2>Galleries</h2>
-                    <hr/>
-                    <CardDeck>
-                        {loading ? loadingDisplay : albumDisplay}
-                    </CardDeck>
+                    <section>
+                        <h2 class="section-title mb-2 h1">Gallery</h2>
+
+                        <CardDeck>
+                            {loading ? loadingDisplay : albumDisplay}
+                        </CardDeck>
+                    </section>
                 </FlexContainer>
            </>
           )

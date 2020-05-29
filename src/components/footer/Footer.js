@@ -1,18 +1,17 @@
 import React from 'react'
 import './Footer.css'
 import logo from "../../assets/main-logo-nobg.png";
-import { Link } from 'react-router-dom';
 
 const Footer = (props) => {
 
   return (
       <footer class="footer">
         <div class="row footer-wrapper" >
-        	<div class="col-md-4 order-md-1 order-12  footer-brand">
-            	  <img src={logo} className="footer-logo"/>
-                <p>© 2020 Westward Home Builders LLC, All rights reserved</p>
+        	<div class="col-lg-5 col-md-4 order-md-1 order-12  footer-brand">
+            	  <img src={logo} alt="Westward Home Builders Logo" className="footer-logo"/>
+                <p>© 2020 Westward Home Builders LLC, <br/> All rights reserved</p>
           </div>
-        	<div class="col-md-3 order-md-2 order-2 footer-nav">
+        	<div class="col-lg-3 col-md-3 order-md-2 order-2 footer-nav">
             	<h4>Quick Links</h4>
             	<div class="col-md-6">
                     <ul class="list">
@@ -24,15 +23,15 @@ const Footer = (props) => {
               </div>
           </div>
         	
-        	<div class="col-md-5 order-md-3 order-1 footer-contact">
+        	<div class="col-lg-4 col-md-5 order-md-3 order-1 footer-contact">
             	<h4>Contact</h4>
               <div class="footer-contact-method">
-                <ion-icon name="call-outline" size="large"></ion-icon>
+                <ion-icon name="call-outline" ></ion-icon>
                 <a href="/"><span>314-541-8866</span></a>
               </div>
               <div class="footer-contact-method">
-                <ion-icon name="mail-outline" size="large"></ion-icon>
-                <a href="/"><span>support@westwardhomebuilders.com</span></a>
+                <ion-icon name="mail-outline" ></ion-icon>
+                <a href="mailto:support@westwardhomebuilders.com"><span>support@westwardhomebuilders.com</span></a>
               </div>
           </div>
         </div>

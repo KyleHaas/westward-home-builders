@@ -26,7 +26,7 @@ const GlobalStyles = createGlobalStyle`
       width: 100%;
       padding: 50px;
       text-align: center;
-      font-size: 14px;
+      font-size: 16px;
   }
 
   .section-inner {
