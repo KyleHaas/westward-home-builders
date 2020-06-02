@@ -20,11 +20,17 @@ class Home extends Component {
               <div className="overlay">
                   <div className="overlay-text">
                       <div className="overlay-text-block">
-                          <h1>For All Your Building Needs</h1>
+                          <div className="overlay-text-container">
+                            <h1>Westward Home Builders</h1>
+                            <h2>Let us build your next home</h2>
+                            <div>
+                                <button type="button" class="btn contact-us-button">
+                                    Contact Us Today
+                                </button>
+                            </div>
+                          </div>
                       </div>
-                    <button type="button" class="btn btn-outline-light contact-us-button">
-                        <ion-icon name="call-outline"></ion-icon> Call Us
-                    </button>
+                    
                   </div>
                   <div className="overlay-scroll">
                       <div className="overlay-scroll-button" onClick={() => this.scrolldown()}>

@@ -8,7 +8,7 @@ class NotFound extends Component {
         return (
             <>
               <div class="error-container">
-                <div class="row">
+                <div class="flex-container">
                     <div class="col-md-12">
                         <div class="error-template">
                             <h1>

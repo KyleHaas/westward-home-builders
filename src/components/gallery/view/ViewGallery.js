@@ -10,6 +10,7 @@ class ViewGallery extends Component {
     }
 
     componentDidMount () {
+        console.log('calling aws')
         const imageUrl = 'https://d2y23heqdij067.cloudfront.net/'
         // Retrieve the list of ablums available. Then set the 
         // state based on the results.
@@ -23,12 +24,15 @@ class ViewGallery extends Component {
     }
     render() {
         return(
-            <div>
-                <h2>{this.state.albumName}</h2>
-                <PhotoGallery images={this.state.images}></PhotoGallery>
+            <div className="flex-container">
+                <section>
+                    <h1 class="section-title mb-2 h1 display-4">{this.state.albumName}</h1>
+                    <PhotoGallery images={this.state.images}></PhotoGallery>
+                </section>
             </div>
         )
     }
 }  
 
 export default ViewGallery
+

@@ -27,6 +27,7 @@ function PhotoGallery(props) {
                 {viewerIsOpen ? (
                 <Modal  onClose={closeLightbox} >
                     <Carousel
+                    modalProps= {{preventScroll:false}}
                     currentIndex={currentImage}
                     views={images.map(x => ({
                         ...x,

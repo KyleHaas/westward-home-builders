@@ -5,6 +5,8 @@ import Home from "./components/home/Home"
 import Gallery from "./components/gallery/Gallery"
 import NotFound from "./components/error/NotFound"
 import ViewGallery from "./components/gallery/view/ViewGallery"
+import AboutUs from "./components/about/AboutUs"
+import ContactUs from "./components/contact/ContactUs"
 import { Switch,Route,BrowserRouter as Router } from "react-router-dom";
 import './App.css'
 import GlobalStyle from './styles/Global';
@@ -32,6 +34,8 @@ class App extends Component {
               <Route exact path="/" component={Home}/>
               <Route exact path="/gallery" component={Gallery}/>
               <Route path="/gallery/:album" render={({match}) => (<ViewGallery album={match.params.album}/>)}/> 
+              <Route path="/about" component={AboutUs}/>
+              <Route path="/contact" component={ContactUs} />
               <Route path="*" component={NotFound}/>
             </Switch>
           </Router>

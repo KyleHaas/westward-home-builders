@@ -19,26 +19,40 @@ const s3 = new S3({
 //
 // Utility function to list the ablums available in s3.
 export async function getAlbums(){
-  const awsResponse = await s3.listObjects({Delimiter: '/'}, function(err, data) {
-    if (err) {
-      return alert('There was an error listing your albums: ' + err.message);
-    }
-  }).promise();
-  return awsResponse.CommonPrefixes.map(function(commonPrefix) {
-    var prefix = commonPrefix.Prefix;
-    return decodeURIComponent(prefix.replace('/', ''));
-  });
+  try {
+    let awsResponse = await s3.listObjectsV2({Delimiter: '/'}).promise();
+    return awsResponse.CommonPrefixes.map(function(commonPrefix) {
+      var prefix = commonPrefix.Prefix;
+      return decodeURIComponent(prefix.replace('/', ''));
+    });
+  } catch(err) {
+    
+  }
 }
 
 // Retrieve photos that exist in an album.
 export async function viewAlbum(albumName){
-  var albumPhotosKey = encodeURIComponent(albumName) + '/';
-  const awsResponse = await s3.listObjects({Prefix: albumPhotosKey}, function(err, data) {
-    if (err) {
-      return alert('There was an error viewing your album: ' + err.message);
-    }
-  }).promise();
-  return awsResponse.Contents.map(function(image) {
-    return image.Key.replace(albumPhotosKey, '');
-  });
+  console.log("Getting albums.")
+  let albumPhotosKey = albumName + '/';
+  try {
+    let awsResponse = await s3.listObjectsV2({Prefix: albumPhotosKey}).promise();
+    return awsResponse.Contents.map(function(image) {
+      return image.Key.replace(albumPhotosKey, '');
+    });
+  } catch (err) {
+
+  }
+}
+
+export async function peekAlbum(albumName) {
+  console.log("peeking album " + albumName);
+  let albumPhotosKey = albumName + '/';
+  try {
+    let awsResponse = await s3.listObjectsV2({Prefix: albumPhotosKey, MaxKeys: 2}).promise();
+    return awsResponse.Contents.map(function(image) {
+      return image.Key.replace(albumPhotosKey, '');
+    });
+  } catch (err) {
+
+  }
 }
