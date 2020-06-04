@@ -50,12 +50,9 @@ class ContactUs extends Component {
                                     <div class="icon">
                                         <div class="image"><i class="fa fa-envelope" aria-hidden="true"></i></div>
                                         <div class="info">
-                                            <h3 class="title">MAIL & WEBSITE</h3>
+                                            <h3 class="title">Email</h3>
                                             <p>
-                                                <i class="fa fa-envelope" aria-hidden="true"></i> &nbsp gondhiyahardik6610@gmail.com
-                                                <br/>
-                                                <br/>
-                                                <i class="fa fa-globe" aria-hidden="true"></i> &nbsp www.hardikgondhiya.com
+                                                <i class="fa fa-envelope" aria-hidden="true"></i> inquiry@westwardhomebuilders.com
                                             </p>
                                         
                                         </div>
@@ -69,12 +66,12 @@ class ContactUs extends Component {
                                     <div class="icon">
                                         <div class="image"><i class="fa fa-mobile" aria-hidden="true"></i></div>
                                         <div class="info">
-                                            <h3 class="title">CONTACT</h3>
+                                            <h3 class="title">Phone</h3>
                                             <p>
-                                                <i class="fa fa-mobile" aria-hidden="true"></i> &nbsp (+91)-9624XXXXX
+                                                <i class="fa fa-mobile" aria-hidden="true"></i>Phone   555-555-5555
                                                 <br/>
                                                 <br/>
-                                                <i class="fa fa-mobile" aria-hidden="true"></i> &nbsp  (+91)-756706XXXX
+                                                <i class="fa fa-mobile" aria-hidden="true"></i>Fax  555-555-5555
                                             </p>
                                         </div>
                                     </div>
@@ -82,21 +79,7 @@ class ContactUs extends Component {
                                 </div> 
                             </div>
                                 
-                            <div class="col-xs-12 col-sm-6 col-lg-4">
-                                <div class="box">							
-                                    <div class="icon">
-                                        <div class="image"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
-                                        <div class="info">
-                                            <h3 class="title">ADDRESS</h3>
-                                            <p>
-                                                <i class="fa fa-map-marker" aria-hidden="true"></i> &nbsp 15/3 Junction Plot 
-                                                "Shree Krishna Krupa", Rajkot - 360001.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="space"></div>
-                                </div> 
-                            </div>		
+                            
                         </div>
                     </div>    
                 </section>

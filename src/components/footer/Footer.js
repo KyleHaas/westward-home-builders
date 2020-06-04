@@ -27,7 +27,7 @@ const Footer = (props) => {
             	<h4>Contact</h4>
               <div class="footer-contact-method">
                 <ion-icon name="call-outline" ></ion-icon>
-                <a href="/"><span>314-541-8866</span></a>
+                <a href="tel:3145418866"><span>314-541-8866</span></a>
               </div>
               <div class="footer-contact-method">
                 <ion-icon name="mail-outline" ></ion-icon>

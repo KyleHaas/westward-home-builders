@@ -57,16 +57,14 @@ class Gallery extends Component {
         
         return (
             <>
-                <div className="flex-container">
-                    <section>
-                        <h1 className="section-title mb-2 h1 display-4">Gallery</h1>
-                        <div class="grid mt-4">
-                            <div className="row">
-                                { loading ? <Loading/> : albumDisplay }
-                            </div>
+                <section>
+                    <h1 className="section-title mb-2 h1 display-4">Gallery</h1>
+                    <div class="grid mt-4">
+                        <div className="row">
+                            { loading ? <Loading/> : albumDisplay }
                         </div>
-                    </section>
-                </div>
+                    </div>
+                </section>
            </>
           )
     }

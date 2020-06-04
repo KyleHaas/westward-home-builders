@@ -60,6 +60,10 @@
     padding: 150px 10px;
 }
 
+@media (max-width: 576px) {
+    .overlay-text-container { padding: 75px 10px;}
+}
+
 .overlay-scroll {
     width: 100%;
     flex: 1;
@@ -215,11 +219,12 @@ section .section-title:before, section .section-title:after{
 }
 #services .card .card-block{
     flex: 1;
+    text-align: left;
 }
 
 #services .card .icon-block{
     width: 70px;
-    padding: 10px;
+    padding: 10px 10px 10px 0px;
 }
 #services .card .card-block a{
 	color: #3b7bbe !important;
@@ -242,4 +247,57 @@ section .section-title:before, section .section-title:after{
 	-webkit-transition: .5s all ease;
 	-moz-transition: .5s all ease;
 	transition: .5s all ease;
+}
+
+
+
+
+
+.aboutus-item{
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 1;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    text-align: left;
+    padding: 15px;
+}
+
+.aboutus-icon {
+    flex-basis: 80px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    height: 100%;
+    border: 2px solid #0ea365;
+    background-color: white;
+    z-index:2;
+    border-radius: 80px;
+    padding: 10px;
+}
+
+.aboutus-item:first-child:before {
+    border:none;
+}
+
+.aboutus-item:before {
+    content: '';
+    width: 2px;
+    height:100px;
+    margin-top: -100px;
+    display: block;
+    position: absolute;
+    border: 1px solid #0ea365;
+    left: 71px;
+}
+
+.aboutus-icon ion-icon {
+    font-size: 60px;
+    --ionicon-stroke-width: 18px;
+    color: #0ea365;
+;
+}
+
+.aboutus-content {
+    flex: 1;
+    padding: 10px;
 }

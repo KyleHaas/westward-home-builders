@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Carousel from './Carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import './Home.css';
-import WhoWeAre from './WhoWeAre';
+import AboutUs from './AboutUs';
 import Services from './Services';
 
 class Home extends Component {
@@ -24,9 +24,9 @@ class Home extends Component {
                             <h1>Westward Home Builders</h1>
                             <h2>Let us build your next home</h2>
                             <div>
-                                <button type="button" class="btn contact-us-button">
+                                <a href="tel:3145418866" type="button" class="btn contact-us-button">
                                     Contact Us Today
-                                </button>
+                                </a>
                             </div>
                           </div>
                       </div>
@@ -44,7 +44,7 @@ class Home extends Component {
               <div className="section-divider">
                   <hr className="divider"/> 
               </div>
-              <WhoWeAre/>
+              <AboutUs/>
               <div className="section-divider">
                   <hr className="divider"/> 
               </div>
