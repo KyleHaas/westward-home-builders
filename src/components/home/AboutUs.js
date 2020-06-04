@@ -12,7 +12,7 @@ export default () => (
                         <div class="aboutus-item-container">
                             <div class="aboutus-item">
                                 <div class="aboutus-icon">
-                                    <ion-icon name="home-outline"></ion-icon>
+                                    <ion-icon name="home"></ion-icon>
                                 </div>
                                 <div class="aboutus-content">
                                     <h4>Reliability</h4>
@@ -21,7 +21,7 @@ export default () => (
                             </div>
                             <div class="aboutus-item">
                                 <div class="aboutus-icon">
-                                <ion-icon name="hammer-outline"></ion-icon>
+                                <ion-icon name="hammer"></ion-icon>
                                 </div>
                                 <div class="aboutus-content">
                                     <h4>Dependability</h4>
@@ -30,7 +30,7 @@ export default () => (
                             </div>
                             <div class="aboutus-item">
                                 <div class="aboutus-icon">
-                                <ion-icon name="build-outline"></ion-icon>
+                                <ion-icon name="build"></ion-icon>
                                 </div>
                                 <div class="aboutus-content">
                                     <h4>Quality</h4>
@@ -39,7 +39,7 @@ export default () => (
                             </div>
                             <div class="aboutus-item">
                                 <div class="aboutus-icon">
-                                <ion-icon name="thumbs-up-outline"></ion-icon>
+                                <ion-icon name="thumbs-up"></ion-icon>
                                 </div>
                                 <div class="aboutus-content">
                                     <h4>Something Else</h4>

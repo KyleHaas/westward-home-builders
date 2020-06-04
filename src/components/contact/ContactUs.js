@@ -15,7 +15,7 @@ class ContactUs extends Component {
                                 <h1 class="section-title mb-2 h1 display-4">Contact Us</h1>
                             </div>
                             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6  mt-4" > 
-                                <iframe width="100%" height="320px;" frameborder="0"  src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJaY32Qm3KWTkRuOnKfoIVZws&key=AIzaSyAf64FepFyUGZd3WFWhZzisswVx2K37RFY" allowfullscreen></iframe>
+                                <iframe width="100%" height="320px;" title="map" frameborder="0"  src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJaY32Qm3KWTkRuOnKfoIVZws&key=AIzaSyAf64FepFyUGZd3WFWhZzisswVx2K37RFY" allowfullscreen></iframe>
                             </div>
 
                             <div class="col-md-6  mt-4">
